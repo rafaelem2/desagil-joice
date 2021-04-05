@@ -8,7 +8,12 @@ public class CalculadoraCFC extends Calculadora{
 
 	@Override
 	public double calcula(double peso, double raio) {
-		// TODO Auto-generated method stub
-		return 0;
+		double avogadro = 6.023 * Math.pow(10, 23);
+		double raioCm = raio * Math.pow(10, -7);
+		double ma = 4*peso/avogadro;
+		double volume = Math.pow(4 * raioCm/Math.sqrt(2), 3);
+		double densidade = ma/volume;
+		
+		return densidade;
 	}
 }
